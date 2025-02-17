@@ -33,6 +33,7 @@ function dropMoneyOnDeath(ply, weapon, killer)
 	if (amount == 0) then
 		deathMessage = "You lost nothing out of your wallet"
 	end
+	ply:PrintMessage(HUD_PRINTCENTER, deathMessage)
 end
 
 hook.Add("PlayerDeath", "Drop money on death", dropMoneyOnDeath)
